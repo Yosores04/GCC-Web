@@ -1,0 +1,62 @@
+{% extends "dashboard/base.html" %}
+
+{% block title %}Content Dashboard{% endblock %}
+
+{% block dashboard_content %}
+<section class="hero-block">
+  <h1 class="dashboard-heading">Content Dashboard</h1>
+  <p class="dashboard-subheading">
+    Manage page sections, gallery images, and publishing order in one place.
+  </p>
+</section>
+
+<section class="stats-grid">
+  <article class="stat-card">
+    <span class="stat-icon-wrap" aria-hidden="true">
+      <svg class="icon stat-icon"><use href="#i-layout"></use></svg>
+    </span>
+    <span class="stat-label">Sections</span>
+    <span class="stat-value">Pages</span>
+  </article>
+  <article class="stat-card">
+    <span class="stat-icon-wrap" aria-hidden="true">
+      <svg class="icon stat-icon"><use href="#i-photo"></use></svg>
+    </span>
+    <span class="stat-label">Media</span>
+    <span class="stat-value">Gallery</span>
+  </article>
+  <article class="stat-card">
+    <span class="stat-icon-wrap" aria-hidden="true">
+      <svg class="icon stat-icon"><use href="#i-user"></use></svg>
+    </span>
+    <span class="stat-label">Access</span>
+    <span class="stat-value">Staff</span>
+  </article>
+</section>
+
+<section class="quick-grid">
+  <article class="quick-card">
+    <h3>
+      <svg class="icon quick-title-icon" aria-hidden="true"><use href="#i-pencil"></use></svg>
+      <span>Manage Page Sections</span>
+    </h3>
+    <p>Edit headings, rich text, display order, and section images.</p>
+    <a class="btn btn-primary btn-with-icon" href="{% url 'dashboard:page_list' %}">
+      <svg class="icon btn-icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+      <span>Open Section Editor</span>
+    </a>
+  </article>
+
+  <article class="quick-card">
+    <h3>
+      <svg class="icon quick-title-icon" aria-hidden="true"><use href="#i-photo"></use></svg>
+      <span>Manage Gallery</span>
+    </h3>
+    <p>Add new photos and update captions for the public gallery.</p>
+    <a class="btn btn-primary btn-with-icon" href="{% url 'dashboard:gallery_list' %}">
+      <svg class="icon btn-icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+      <span>Open Gallery Manager</span>
+    </a>
+  </article>
+</section>
+{% endblock %}

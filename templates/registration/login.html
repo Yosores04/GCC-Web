@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<section class="auth-shell">
+  <article class="auth-intro reveal">
+    <p class="eyebrow">Secure Access</p>
+    <h1 class="auth-hero-title">{{ site_settings.school_name|default:"School" }} Staff Portal</h1>
+    <p class="auth-hero-copy">
+      Sign in to manage pages, update media, and keep the {{ site_settings.school_name|default:"school" }} website fresh and professional.
+    </p>
+    <ul class="auth-points">
+      <li>Update page text and hero sections</li>
+      <li>Manage gallery and activity highlights</li>
+      <li>Control what appears on the public site</li>
+    </ul>
+  </article>
+
+  <article class="auth-card reveal">
+    <h2 class="auth-title">Sign in to continue</h2>
+    <p class="auth-subtitle">Use your staff username and password.</p>
+
+    {% if form.non_field_errors %}
+      <ul class="auth-errors">
+        {% for error in form.non_field_errors %}
+          <li>{{ error }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <form class="auth-form" method="post">
+      {% csrf_token %}
+
+      <div class="auth-field">
+        <label for="{{ form.username.id_for_label }}">Username</label>
+        {{ form.username }}
+        {% if form.username.errors %}
+          <ul class="auth-errors">
+            {% for error in form.username.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+
+      <div class="auth-field">
+        <label for="{{ form.password.id_for_label }}">Password</label>
+        {{ form.password }}
+        {% if form.password.errors %}
+          <ul class="auth-errors">
+            {% for error in form.password.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+
+      {% if next %}
+        <input type="hidden" name="next" value="{{ next }}">
+      {% endif %}
+
+      <button class="auth-submit" type="submit">Sign in</button>
+    </form>
+  </article>
+</section>
+{% endblock %}

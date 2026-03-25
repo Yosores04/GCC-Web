@@ -1,0 +1,1073 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "content",
+    "model": "galleryimage"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "content",
+    "model": "page"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "content",
+    "model": "sitesettings"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "content",
+    "model": "pagesection"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "cf61e48ucu0a5yftpw9yiiuavxcp7hi8",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSFMeUxx6d5vIAMMUjU0Ke3K-O_apAvd3nPOfYlA21rD1nkJUxZnAeL0u0VKD247yHdqt1mmua3LFOWuyIN2eZ0zPy-H-3dQqddv7XOJ1ihkSJjAeweujGiKhZIoOpdAO9BICgaDXjFobQdSltGOOpMS7w_OJDbc:1w1yYG:c8WJnlCqyWkzAEWIam_M8onUWzELXtbEf1S_1i3GDbI",
+    "expire_date": "2026-03-30T03:23:32.535Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "o1umyusrcyv8y5ks455iyl3mdp38jawn",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlmxN3Z2Kek5g7X-LA6gRIqTCnF3iJQC2jcz76UCb2sNWytLGLM6K6NOv1vk9CjTDvKdp9us0zytyxj1ruiDNn2dc3leDvfvoHKr35qFIvYSxROhxewAykACjiOQMRaMoPiCviPKmNn1PrFNkoYCtgNU7w_maDfJ:1w1yXg:ODmSBHsdeWWcBxfHRYJcRxY7DMauL4KZhhRCvzZ280k",
+    "expire_date": "2026-03-30T03:22:56.943Z"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add gallery image",
+    "content_type": [
+      "content",
+      "galleryimage"
+    ],
+    "codename": "add_galleryimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change gallery image",
+    "content_type": [
+      "content",
+      "galleryimage"
+    ],
+    "codename": "change_galleryimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete gallery image",
+    "content_type": [
+      "content",
+      "galleryimage"
+    ],
+    "codename": "delete_galleryimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view gallery image",
+    "content_type": [
+      "content",
+      "galleryimage"
+    ],
+    "codename": "view_galleryimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add page",
+    "content_type": [
+      "content",
+      "page"
+    ],
+    "codename": "add_page"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change page",
+    "content_type": [
+      "content",
+      "page"
+    ],
+    "codename": "change_page"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete page",
+    "content_type": [
+      "content",
+      "page"
+    ],
+    "codename": "delete_page"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view page",
+    "content_type": [
+      "content",
+      "page"
+    ],
+    "codename": "view_page"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add site settings",
+    "content_type": [
+      "content",
+      "sitesettings"
+    ],
+    "codename": "add_sitesettings"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change site settings",
+    "content_type": [
+      "content",
+      "sitesettings"
+    ],
+    "codename": "change_sitesettings"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete site settings",
+    "content_type": [
+      "content",
+      "sitesettings"
+    ],
+    "codename": "delete_sitesettings"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view site settings",
+    "content_type": [
+      "content",
+      "sitesettings"
+    ],
+    "codename": "view_sitesettings"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add page section",
+    "content_type": [
+      "content",
+      "pagesection"
+    ],
+    "codename": "add_pagesection"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change page section",
+    "content_type": [
+      "content",
+      "pagesection"
+    ],
+    "codename": "change_pagesection"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete page section",
+    "content_type": [
+      "content",
+      "pagesection"
+    ],
+    "codename": "delete_pagesection"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view page section",
+    "content_type": [
+      "content",
+      "pagesection"
+    ],
+    "codename": "view_pagesection"
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$Z73LPdpc2aOonbOnSXpxoh$3GnIii8eQCTe3lWoU5nGfeRUQlAX2jRxYHRPBq6Wctk=",
+    "last_login": "2026-03-16T03:23:32.533Z",
+    "is_superuser": true,
+    "username": "josh",
+    "first_name": "",
+    "last_name": "",
+    "email": "joshua.yosores@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-03-16T03:05:44.408Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "content.page",
+  "pk": 1,
+  "fields": {
+    "slug": "home",
+    "title": "Home",
+    "meta_title": "",
+    "meta_description": "",
+    "is_published": true,
+    "updated_at": "2026-03-16T02:43:41.749Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.page",
+  "pk": 2,
+  "fields": {
+    "slug": "about",
+    "title": "About",
+    "meta_title": "",
+    "meta_description": "",
+    "is_published": true,
+    "updated_at": "2026-03-16T02:43:41.753Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.page",
+  "pk": 3,
+  "fields": {
+    "slug": "contact",
+    "title": "Contact",
+    "meta_title": "",
+    "meta_description": "",
+    "is_published": true,
+    "updated_at": "2026-03-16T02:43:41.756Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.page",
+  "pk": 4,
+  "fields": {
+    "slug": "courses",
+    "title": "Courses",
+    "meta_title": "",
+    "meta_description": "",
+    "is_published": true,
+    "updated_at": "2026-03-16T02:43:41.758Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.page",
+  "pk": 5,
+  "fields": {
+    "slug": "activities",
+    "title": "Activities",
+    "meta_title": "",
+    "meta_description": "",
+    "is_published": true,
+    "updated_at": "2026-03-16T02:43:41.761Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.page",
+  "pk": 6,
+  "fields": {
+    "slug": "gallery",
+    "title": "Gallery",
+    "meta_title": "",
+    "meta_description": "",
+    "is_published": true,
+    "updated_at": "2026-03-16T03:55:10.509Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 1,
+  "fields": {
+    "page": 1,
+    "section_key": "hero-carousel",
+    "heading": "Gingoog City Colleges",
+    "body": "<p>Empowering learners with values-driven and future-ready education.</p>",
+    "image": "sections/placeholders/home-section-1_5E2EGkW.png",
+    "display_order": 1,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.170Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 2,
+  "fields": {
+    "page": 1,
+    "section_key": "welcome-intro",
+    "heading": "Welcome Message",
+    "body": "<p>Welcome to our official website. Edit this section with your principal's message.</p>",
+    "image": "sections/placeholders/home-section-2_DOFjbb2.png",
+    "display_order": 2,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.173Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 3,
+  "fields": {
+    "page": 1,
+    "section_key": "program-highlights",
+    "heading": "Program Highlights",
+    "body": "<p>Showcase your top academic programs and student pathways here.</p>",
+    "image": "sections/placeholders/home-section-3_GDjTNBh.png",
+    "display_order": 3,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.176Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 4,
+  "fields": {
+    "page": 2,
+    "section_key": "hero-banner",
+    "heading": "About Gingoog City Colleges",
+    "body": "<p>Introduce your institution's legacy and role in the community.</p>",
+    "image": "sections/placeholders/about-section-1_JwqUcpX.png",
+    "display_order": 1,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.242Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 5,
+  "fields": {
+    "page": 2,
+    "section_key": "institution-story",
+    "heading": "Our Story",
+    "body": "<p>Describe your founding history and milestones.</p>",
+    "image": "sections/placeholders/about-section-2_9hCmNrj.png",
+    "display_order": 2,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.245Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 6,
+  "fields": {
+    "page": 2,
+    "section_key": "mission-vision",
+    "heading": "Mission and Vision",
+    "body": "<p>Present your mission, vision, and core values.</p>",
+    "image": "sections/placeholders/about-section-3_KDm7eiV.png",
+    "display_order": 3,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.247Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 7,
+  "fields": {
+    "page": 3,
+    "section_key": "hero-banner",
+    "heading": "Contact Us",
+    "body": "<p>Reach out to Gingoog City Colleges for inquiries and admissions support.</p>",
+    "image": "sections/placeholders/contact-section-1_jRC4AMG.png",
+    "display_order": 1,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.441Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 8,
+  "fields": {
+    "page": 3,
+    "section_key": "contact-details",
+    "heading": "Contact Details",
+    "body": "<p>Add your office phone numbers, emails, and operating hours.</p>",
+    "image": "sections/placeholders/contact-section-2_mOkMPy7.png",
+    "display_order": 2,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.444Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 9,
+  "fields": {
+    "page": 3,
+    "section_key": "map-block",
+    "heading": "Campus Location",
+    "body": "<p>Provide location details and commuting directions.</p>",
+    "image": "sections/placeholders/contact-section-3_W4KnWsK.png",
+    "display_order": 3,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.446Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 10,
+  "fields": {
+    "page": 4,
+    "section_key": "hero-banner",
+    "heading": "Academic Programs",
+    "body": "<p>Explore courses that prepare students for careers and lifelong learning.</p>",
+    "image": "sections/placeholders/courses-section-1_0fz7346.png",
+    "display_order": 1,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.301Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 11,
+  "fields": {
+    "page": 4,
+    "section_key": "program-overview",
+    "heading": "Program Overview",
+    "body": "<p>Provide an overview of your curriculum clusters and tracks.</p>",
+    "image": "sections/placeholders/courses-section-2_OEJbuT1.png",
+    "display_order": 2,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.304Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 12,
+  "fields": {
+    "page": 4,
+    "section_key": "course-grid",
+    "heading": "Course List",
+    "body": "<p>List key courses or departments available for enrollment.</p>",
+    "image": "sections/placeholders/courses-section-3_Up0zXON.png",
+    "display_order": 3,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.306Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 13,
+  "fields": {
+    "page": 5,
+    "section_key": "hero-banner",
+    "heading": "Campus Activities",
+    "body": "<p>Show the vibrant student life and co-curricular culture at GCC.</p>",
+    "image": "sections/placeholders/activities-section-1_LGtNxFa.png",
+    "display_order": 1,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.371Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 14,
+  "fields": {
+    "page": 5,
+    "section_key": "activities-carousel",
+    "heading": "Featured Activities",
+    "body": "<p>Highlight sports, clubs, organizations, and special events.</p>",
+    "image": "sections/placeholders/activities-section-2_DjNvuPa.png",
+    "display_order": 2,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.374Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 15,
+  "fields": {
+    "page": 5,
+    "section_key": "student-life-grid",
+    "heading": "Student Life",
+    "body": "<p>Present student-led programs and achievements.</p>",
+    "image": "sections/placeholders/activities-section-3_hv5GaGC.png",
+    "display_order": 3,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.378Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 16,
+  "fields": {
+    "page": 1,
+    "section_key": "news-strip",
+    "heading": "Latest Campus News",
+    "body": "<p>Share announcements, achievements, and upcoming institutional events.</p>",
+    "image": "sections/placeholders/home-news-strip_T1OCVK1.png",
+    "display_order": 4,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.212Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 17,
+  "fields": {
+    "page": 1,
+    "section_key": "cta-band",
+    "heading": "Enroll With Us",
+    "body": "<p>Invite prospective students and families to connect with admissions.</p>",
+    "image": "sections/placeholders/home-cta-band_p1HB01b.png",
+    "display_order": 5,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.238Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 18,
+  "fields": {
+    "page": 2,
+    "section_key": "leadership-preview",
+    "heading": "Leadership Team",
+    "body": "<p>Highlight school leaders and their commitment to student success.</p>",
+    "image": "sections/placeholders/about-leadership-preview_dZey60V.png",
+    "display_order": 4,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.271Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 19,
+  "fields": {
+    "page": 2,
+    "section_key": "cta-band",
+    "heading": "Join the GCC Community",
+    "body": "<p>Encourage prospective students to discover your programs.</p>",
+    "image": "sections/placeholders/about-cta-band_vhKQtRg.png",
+    "display_order": 5,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.297Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 20,
+  "fields": {
+    "page": 4,
+    "section_key": "admissions-cta",
+    "heading": "Admissions Information",
+    "body": "<p>Add entry requirements, schedules, and enrollment details.</p>",
+    "image": "sections/placeholders/courses-admissions-cta_9afUmdk.png",
+    "display_order": 4,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.333Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 21,
+  "fields": {
+    "page": 4,
+    "section_key": "faq-teaser",
+    "heading": "Frequently Asked Questions",
+    "body": "<p>Answer common questions from applicants and parents.</p>",
+    "image": "sections/placeholders/courses-faq-teaser_aQgk7cT.png",
+    "display_order": 5,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.362Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 22,
+  "fields": {
+    "page": 5,
+    "section_key": "events-teaser",
+    "heading": "Upcoming Events",
+    "body": "<p>Promote upcoming school activities and celebrations.</p>",
+    "image": "sections/placeholders/activities-events-teaser_zQjLTL5.png",
+    "display_order": 4,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.404Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 23,
+  "fields": {
+    "page": 5,
+    "section_key": "cta-band",
+    "heading": "Be Part of Campus Life",
+    "body": "<p>Invite students to participate in organizations and programs.</p>",
+    "image": "sections/placeholders/activities-cta-band_t3IIHOO.png",
+    "display_order": 5,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.436Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 24,
+  "fields": {
+    "page": 3,
+    "section_key": "inquiry-cta",
+    "heading": "Inquiry Support",
+    "body": "<p>Guide visitors on how to send admissions and registrar questions.</p>",
+    "image": "sections/placeholders/contact-inquiry-cta_yTnaMGM.png",
+    "display_order": 4,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.475Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 25,
+  "fields": {
+    "page": 3,
+    "section_key": "social-links",
+    "heading": "Social Channels",
+    "body": "<p>Link official social media pages for updates.</p>",
+    "image": "sections/placeholders/contact-social-links_XOhHbXm.png",
+    "display_order": 5,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.504Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 26,
+  "fields": {
+    "page": 6,
+    "section_key": "hero-banner",
+    "heading": "Campus Gallery",
+    "body": "<p>Discover photos of campus life, events, and academic programs.</p>",
+    "image": "sections/placeholders/gallery-hero-banner_GIc6O5p.png",
+    "display_order": 1,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.538Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 27,
+  "fields": {
+    "page": 6,
+    "section_key": "gallery-carousel",
+    "heading": "Featured Moments",
+    "body": "<p>Use this section for top gallery highlights.</p>",
+    "image": "sections/placeholders/gallery-gallery-carousel_ZVBMXBE.png",
+    "display_order": 2,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.565Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 28,
+  "fields": {
+    "page": 6,
+    "section_key": "album-grid",
+    "heading": "Photo Albums",
+    "body": "<p>Curate themed albums such as academics, activities, and ceremonies.</p>",
+    "image": "sections/placeholders/gallery-album-grid_L2ihyjG.png",
+    "display_order": 3,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.593Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 29,
+  "fields": {
+    "page": 6,
+    "section_key": "campus-life-text",
+    "heading": "Campus Life",
+    "body": "<p>Share stories behind your photo highlights.</p>",
+    "image": "sections/placeholders/gallery-campus-life-text_cbkmxy9.png",
+    "display_order": 4,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.621Z",
+    "updated_by": null
+  }
+},
+{
+  "model": "content.pagesection",
+  "pk": 30,
+  "fields": {
+    "page": 6,
+    "section_key": "cta-band",
+    "heading": "Visit Our Campus",
+    "body": "<p>Invite visitors to tour the campus and learn more.</p>",
+    "image": "sections/placeholders/gallery-cta-band_jJB3MFQ.png",
+    "display_order": 5,
+    "is_active": true,
+    "updated_at": "2026-03-16T03:55:10.650Z",
+    "updated_by": null
+  }
+}
+]

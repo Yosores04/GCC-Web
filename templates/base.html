@@ -1,0 +1,249 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    {% block title %}
+      {% if site_settings and site_settings.school_name %}
+        {{ site_settings.school_name }}
+      {% else %}
+        Gingoog City Colleges
+      {% endif %}
+    {% endblock %}
+  </title>
+  {% if site_settings and site_settings.logo %}
+    <link rel="icon" type="image/png" href="{{ site_settings.logo.url }}">
+    <link rel="apple-touch-icon" href="{{ site_settings.logo.url }}">
+  {% else %}
+    <link rel="icon" type="image/svg+xml" href="{% static 'img/gcc-favicon.svg' %}">
+  {% endif %}
+  <link rel="stylesheet" href="{% static 'css/site.css' %}">
+</head>
+<body class="site-body">
+  <div class="site-aura" aria-hidden="true"></div>
+  <svg class="site-icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="f-mail" viewBox="0 0 24 24">
+      <path d="M3.5 6.5h17v11h-17z" />
+      <path d="m4.5 8 7.5 6 7.5-6" />
+    </symbol>
+    <symbol id="f-phone" viewBox="0 0 24 24">
+      <path d="M8.8 4.8c.4-.4 1-.6 1.6-.4l2 .7c.7.2 1.1.9.9 1.6l-.5 2.1c-.1.5 0 1 .4 1.3l1.4 1.4c.4.4.8.5 1.3.4l2.1-.5c.7-.2 1.4.2 1.6.9l.7 2c.2.6 0 1.2-.4 1.6l-1 1c-.9.9-2.2 1.2-3.4.8-3.2-1-6.1-3.9-7.1-7.1-.4-1.2-.1-2.5.8-3.4z" />
+    </symbol>
+    <symbol id="f-map" viewBox="0 0 24 24">
+      <path d="M12 20s6-5.2 6-10a6 6 0 1 0-12 0c0 4.8 6 10 6 10Z" />
+      <circle cx="12" cy="10" r="2" />
+    </symbol>
+    <symbol id="f-link" viewBox="0 0 24 24">
+      <path d="M9.5 14.5 14.5 9.5" />
+      <path d="M7.5 16.5 5 19a3 3 0 0 1-4.2-4.2l2.5-2.5a3 3 0 0 1 4.2 0" />
+      <path d="M16.5 7.5 19 5a3 3 0 0 1 4.2 4.2l-2.5 2.5a3 3 0 0 1-4.2 0" />
+    </symbol>
+    <symbol id="f-facebook" viewBox="0 0 24 24">
+      <path d="M14.5 8h2.5V4.5h-2.5A4.5 4.5 0 0 0 10 9v2H7v3.5h3V20h3.5v-5.5H16V11h-2.5V9c0-.6.4-1 1-1Z" />
+    </symbol>
+    <symbol id="f-instagram" viewBox="0 0 24 24">
+      <rect x="4.5" y="4.5" width="15" height="15" rx="4" />
+      <circle cx="12" cy="12" r="3.3" />
+      <circle cx="16.8" cy="7.4" r="0.8" />
+    </symbol>
+    <symbol id="f-youtube" viewBox="0 0 24 24">
+      <path d="M20.3 8.1c-.2-1-.9-1.7-1.8-1.9C16.9 5.8 15 5.7 12 5.7s-4.9.1-6.5.5c-.9.2-1.6.9-1.8 1.9-.3 1.2-.4 2.5-.4 3.9s.1 2.7.4 3.9c.2 1 .9 1.7 1.8 1.9 1.6.4 3.5.5 6.5.5s4.9-.1 6.5-.5c.9-.2 1.6-.9 1.8-1.9.3-1.2.4-2.5.4-3.9s-.1-2.7-.4-3.9Z" />
+      <path d="m10.3 9.5 4.4 2.5-4.4 2.5z" />
+    </symbol>
+    <symbol id="f-external" viewBox="0 0 24 24">
+      <path d="M14 5h5v5" />
+      <path d="M10 14 19 5" />
+      <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" />
+    </symbol>
+  </svg>
+  <header class="site-header">
+    <div class="header-shell">
+      <a class="brand-mark" href="/">
+        {% if site_settings and site_settings.logo %}
+          <img
+            class="brand-logo"
+            src="{{ site_settings.logo.url }}"
+            alt="{{ site_settings.school_name|default:'Gingoog City Colleges' }} logo"
+          >
+        {% endif %}
+        <span class="brand-text">
+          {% if site_settings and site_settings.school_name %}
+            {{ site_settings.school_name }}
+          {% else %}
+            Gingoog City Colleges
+          {% endif %}
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="Primary">
+        {% if nav_items %}
+          {% for item in nav_items %}
+            <a
+              class="nav-link{% if request.path == item.url %} is-active{% endif %}"
+              href="{{ item.url }}"
+            >
+              {{ item.label }}
+            </a>
+          {% endfor %}
+        {% else %}
+          <a class="nav-link is-active" href="/">HOME</a>
+        {% endif %}
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="page-shell reveal">
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-shell footer-shell-compact">
+      <section class="footer-block footer-brand-block">
+        <p class="footer-label">About</p>
+        <h2 class="footer-school-name">
+          {% if site_settings and site_settings.school_name %}
+            {{ site_settings.school_name }}
+          {% else %}
+            Gingoog City Colleges
+          {% endif %}
+        </h2>
+        <p class="footer-copy">
+          {% if site_settings and site_settings.tagline %}
+            {{ site_settings.tagline }}
+          {% else %}
+            Academic excellence, character, and service.
+          {% endif %}
+        </p>
+      </section>
+
+      <section class="footer-block">
+        <p class="footer-label">Contact</p>
+        <ul class="footer-list">
+          <li>
+            <span class="footer-key footer-key-with-icon">
+              <svg class="footer-icon" aria-hidden="true"><use href="#f-mail"></use></svg>
+              <span>Email</span>
+            </span>
+            {% if site_settings and site_settings.contact_email %}
+              <a href="mailto:{{ site_settings.contact_email }}">{{ site_settings.contact_email }}</a>
+            {% else %}
+              <span class="footer-empty">Set in admin</span>
+            {% endif %}
+          </li>
+          <li>
+            <span class="footer-key footer-key-with-icon">
+              <svg class="footer-icon" aria-hidden="true"><use href="#f-phone"></use></svg>
+              <span>Phone</span>
+            </span>
+            {% if site_settings and site_settings.contact_phone %}
+              <span>{{ site_settings.contact_phone }}</span>
+            {% else %}
+              <span class="footer-empty">Set in admin</span>
+            {% endif %}
+          </li>
+          <li>
+            <span class="footer-key footer-key-with-icon">
+              <svg class="footer-icon" aria-hidden="true"><use href="#f-map"></use></svg>
+              <span>Address</span>
+            </span>
+            {% if site_settings and site_settings.address %}
+              <span>{{ site_settings.address }}</span>
+            {% else %}
+              <span class="footer-empty">Set in admin</span>
+            {% endif %}
+          </li>
+        </ul>
+      </section>
+
+      <section class="footer-block">
+        <p class="footer-label">Quick Links</p>
+        <ul class="footer-links">
+          {% if site_settings and site_settings.website_url %}
+            <li>
+              <a class="footer-link-with-icon" href="{{ site_settings.website_url }}" target="_blank" rel="noopener noreferrer">
+                <svg class="footer-icon" aria-hidden="true"><use href="#f-external"></use></svg>
+                <span>Official Website</span>
+              </a>
+            </li>
+          {% endif %}
+          {% if site_settings and site_settings.admissions_url %}
+            <li>
+              <a class="footer-link-with-icon" href="{{ site_settings.admissions_url }}" target="_blank" rel="noopener noreferrer">
+                <svg class="footer-icon" aria-hidden="true"><use href="#f-external"></use></svg>
+                <span>Admissions</span>
+              </a>
+            </li>
+          {% endif %}
+          {% if nav_items %}
+            {% for item in nav_items %}
+              <li>
+                <a class="footer-link-with-icon" href="{{ item.url }}">
+                  <svg class="footer-icon" aria-hidden="true"><use href="#f-link"></use></svg>
+                  <span>{{ item.label }}</span>
+                </a>
+              </li>
+            {% endfor %}
+          {% else %}
+            <li>
+              <a class="footer-link-with-icon" href="/">
+                <svg class="footer-icon" aria-hidden="true"><use href="#f-link"></use></svg>
+                <span>HOME</span>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link-with-icon" href="/accounts/login/">
+                <svg class="footer-icon" aria-hidden="true"><use href="#f-link"></use></svg>
+                <span>STAFF LOGIN</span>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+        <p class="footer-label footer-label-social">Social</p>
+        {% if site_settings %}
+          {% if site_settings.facebook_url or site_settings.instagram_url or site_settings.youtube_url %}
+            <div class="footer-social-list">
+              {% if site_settings.facebook_url %}
+                <a class="footer-social footer-social-with-icon" href="{{ site_settings.facebook_url }}" target="_blank" rel="noopener noreferrer">
+                  <svg class="footer-icon" aria-hidden="true"><use href="#f-facebook"></use></svg>
+                  <span>Facebook</span>
+                </a>
+              {% endif %}
+              {% if site_settings.instagram_url %}
+                <a class="footer-social footer-social-with-icon" href="{{ site_settings.instagram_url }}" target="_blank" rel="noopener noreferrer">
+                  <svg class="footer-icon" aria-hidden="true"><use href="#f-instagram"></use></svg>
+                  <span>Instagram</span>
+                </a>
+              {% endif %}
+              {% if site_settings.youtube_url %}
+                <a class="footer-social footer-social-with-icon" href="{{ site_settings.youtube_url }}" target="_blank" rel="noopener noreferrer">
+                  <svg class="footer-icon" aria-hidden="true"><use href="#f-youtube"></use></svg>
+                  <span>YouTube</span>
+                </a>
+              {% endif %}
+            </div>
+          {% else %}
+            <span class="footer-empty">Set social links in admin</span>
+          {% endif %}
+        {% else %}
+          <span class="footer-empty">Set social links in admin</span>
+        {% endif %}
+      </section>
+    </div>
+    <div class="footer-bottom">
+      <span>
+        &copy; {% now "Y" %}
+        {% if site_settings and site_settings.school_name %}
+          {{ site_settings.school_name }}
+        {% else %}
+          Gingoog City Colleges
+        {% endif %}.
+      </span>
+      <span>All rights reserved.</span>
+    </div>
+  </footer>
+  <script src="{% static 'js/site.js' %}" defer></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends "dashboard/base.html" %}
+
+{% block title %}Manage Pages{% endblock %}
+
+{% block dashboard_content %}
+<section class="hero-block">
+  <h1 class="dashboard-heading">Manage Page Sections</h1>
+  <p class="dashboard-subheading">Choose a section and update its content or image.</p>
+</section>
+
+<section class="panel-stack">
+  {% for page in pages %}
+    <article class="panel-card">
+      <h2 class="panel-title">{{ page.title }}</h2>
+      <p class="meta-kicker">Slug: {{ page.slug }}</p>
+
+      <ul class="section-list">
+        {% for section in page.sections.all %}
+          <li class="section-item">
+            <div>
+              <div class="section-key">{{ section.section_key }}</div>
+              <div class="section-meta">
+                Order: {{ section.display_order }} · {% if section.is_active %}Active{% else %}Hidden{% endif %}
+              </div>
+            </div>
+            <a class="btn btn-ghost btn-with-icon" href="{% url 'dashboard:section_edit' section.id %}">
+              <svg class="icon btn-icon" aria-hidden="true"><use href="#i-pencil"></use></svg>
+              <span>Edit</span>
+            </a>
+          </li>
+        {% empty %}
+          <li class="empty-state">No sections yet.</li>
+        {% endfor %}
+      </ul>
+    </article>
+  {% empty %}
+    <p class="empty-state">No pages yet.</p>
+  {% endfor %}
+</section>
+{% endblock %}

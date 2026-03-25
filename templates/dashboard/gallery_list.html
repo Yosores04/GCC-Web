@@ -1,0 +1,35 @@
+{% extends "dashboard/base.html" %}
+
+{% block title %}Manage Gallery{% endblock %}
+
+{% block dashboard_content %}
+<section class="hero-block">
+  <h1 class="dashboard-heading">Manage Gallery Images</h1>
+  <p class="dashboard-subheading">Add new photos, update captions, and control display order.</p>
+</section>
+
+<p>
+  <a class="btn btn-primary btn-with-icon" href="{% url 'dashboard:gallery_create' %}">
+    <svg class="icon btn-icon" aria-hidden="true"><use href="#i-plus"></use></svg>
+    <span>Add new image</span>
+  </a>
+</p>
+
+<section class="gallery-grid-admin">
+  {% for item in items %}
+    <article class="panel-card">
+      <h2 class="panel-title">{{ item.title }}</h2>
+      <p class="meta-kicker">
+        {% if item.category %}{{ item.category }} · {% endif %}
+        Order: {{ item.display_order }} · {% if item.is_active %}Active{% else %}Hidden{% endif %}
+      </p>
+      <a class="btn btn-ghost btn-with-icon" href="{% url 'dashboard:gallery_edit' item.id %}">
+        <svg class="icon btn-icon" aria-hidden="true"><use href="#i-pencil"></use></svg>
+        <span>Edit image</span>
+      </a>
+    </article>
+  {% empty %}
+    <p class="empty-state">No gallery images yet.</p>
+  {% endfor %}
+</section>
+{% endblock %}

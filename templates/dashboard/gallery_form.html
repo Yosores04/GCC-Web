@@ -1,0 +1,71 @@
+{% extends "dashboard/base.html" %}
+
+{% block title %}{% if is_create %}Add Gallery Image{% else %}Edit Gallery Image{% endif %}{% endblock %}
+
+{% block dashboard_content %}
+<article class="editor-card">
+  <header class="editor-header">
+    <div>
+      <h1 class="editor-title">
+        <svg class="icon title-icon" aria-hidden="true">
+          <use href="{% if is_create %}#i-plus{% else %}#i-pencil{% endif %}"></use>
+        </svg>
+        <span>{% if is_create %}Add Gallery Image{% else %}Edit Gallery Image{% endif %}</span>
+      </h1>
+      <p class="editor-context">Set title, caption, image, and display order.</p>
+    </div>
+    <a class="btn btn-ghost btn-with-icon" href="{% url 'dashboard:gallery_list' %}">
+      <svg class="icon btn-icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg>
+      <span>Back</span>
+    </a>
+  </header>
+
+  <form class="editor-form" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {% if form.non_field_errors %}
+      <ul class="error-list">
+        {% for error in form.non_field_errors %}
+          <li>{{ error }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <div class="form-grid">
+      {% for field in form %}
+        <div class="form-row{% if field.name == 'caption' %} is-full{% endif %}{% if field.name == 'is_active' %} is-checkbox{% endif %}">
+          {% if field.name == "is_active" %}
+            {{ field }}
+            <label class="form-label-compact" for="{{ field.id_for_label }}">{{ field.label }}</label>
+          {% else %}
+            <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+          {% endif %}
+
+          {% if field.help_text %}
+            <p class="form-help">{{ field.help_text }}</p>
+          {% endif %}
+          {% if field.errors %}
+            <ul class="error-list">
+              {% for error in field.errors %}
+                <li>{{ error }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="form-actions">
+      <button class="btn btn-primary btn-with-icon" type="submit">
+        <svg class="icon btn-icon" aria-hidden="true"><use href="#i-pencil"></use></svg>
+        <span>Save</span>
+      </button>
+      <a class="btn btn-ghost btn-with-icon" href="{% url 'dashboard:gallery_list' %}">
+        <svg class="icon btn-icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg>
+        <span>Cancel</span>
+      </a>
+    </div>
+  </form>
+</article>
+{% endblock %}
