@@ -10,6 +10,12 @@ class PageSectionForm(forms.ModelForm):
 
 
 class GalleryImageForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        allow_multiple_upload = kwargs.pop("allow_multiple_upload", False)
+        super().__init__(*args, **kwargs)
+        if allow_multiple_upload:
+            self.fields["image"].widget.attrs["multiple"] = True
+
     class Meta:
         model = GalleryImage
         fields = ["title", "caption", "category", "image", "display_order", "is_active"]

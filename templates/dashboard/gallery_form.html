@@ -12,7 +12,13 @@
         </svg>
         <span>{% if is_create %}Add Gallery Image{% else %}Edit Gallery Image{% endif %}</span>
       </h1>
-      <p class="editor-context">Set title, caption, image, and display order.</p>
+      <p class="editor-context">
+        {% if is_create %}
+          Set title, caption, images, and display order. You can select multiple pictures at once.
+        {% else %}
+          Set title, caption, image, and display order.
+        {% endif %}
+      </p>
     </div>
     <a class="btn btn-ghost btn-with-icon" href="{% url 'dashboard:gallery_list' %}">
       <svg class="icon btn-icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg>
